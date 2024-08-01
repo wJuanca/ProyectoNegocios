@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACARD</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nosotros.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+      </a>
+      <a href="index.html">
+        <img src="icon/LOGO-NUEVO.png" alt="Logo" class="logo" />
+      </a>
+        <span class="site-name">JACARD</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Noticias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="section">
+        <img src="imagenes/N1.jpg" alt="imagen secciones">
+        <div class="content">
+          <h1>Nuestra Misión</h1>
+          <p>En GanAgro, nuestra misión es ofrecer productos y servicios agropecuarios de la más alta calidad, promoviendo prácticas sostenibles y eficientes que contribuyan al bienestar de nuestras comunidades y al desarrollo del sector agrícola. Nos comprometemos a ser un socio confiable para nuestros clientes, brindándoles soluciones innovadoras y soporte técnico especializado para maximizar su productividad y rentabilidad.</p>
+        </div>
+      </div>
+      <div class="section reverse">
+        <div class="content">
+          <h1>Nuestra Visión</h1>
+          <p>Aspiramos a ser líderes en el mercado agropecuario, reconocidos por nuestra excelencia, innovación y responsabilidad social. En GanAgro, trabajamos incansablemente para impulsar el crecimiento sostenible del sector agrícola, adoptando tecnologías avanzadas y fomentando un enfoque ecológico en todas nuestras operaciones. Nuestra visión es construir un futuro en el que la agricultura sostenible sea la norma, contribuyendo significativamente a la seguridad alimentaria y al desarrollo económico global.</p>
+        </div>
+        <img src="imagenes/N2.jpg" alt="imagen secciones">
+      </div>
+      <div class="section">
+        <img src="imagenes/N3.jpg" alt="imagen secciones">
+        <div class="content">
+          <h1>Nuestros Valores</h1>
+          <ul>
+            <li>Actuamos con honestidad y transparencia en todas nuestras relaciones comerciales.</li>
+            <li>Nos esforzamos por ofrecer productos y servicios de la más alta calidad a nuestros clientes.</li>
+            <li>Promovemos prácticas agrícolas que protegen el medio ambiente y conservan los recursos naturales.</li>
+            <li>Buscamos continuamente mejorar y adoptar nuevas tecnologías para aumentar la eficiencia y productividad.</li>
+            <li>Estamos dedicados al éxito de nuestros clientes y al desarrollo positivo de nuestras comunidades.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section reverse">
+        <div class="content">
+          <h1>Nuestro Equipo</h1>
+          <p>El equipo de Ganagro está compuesto por profesionales apasionados y dedicados que comparten una visión común: mejorar y modernizar el sector agropecuario. Desde ingenieros agrónomos hasta técnicos especializados, cada miembro de nuestro equipo aporta su experiencia y conocimientos para asegurar que nuestros procesos sean eficientes y nuestros productos de la más alta calidad. Creemos que el éxito de Ganagro se basa en el esfuerzo colectivo y la continua capacitación de nuestro personal.</p>
+        </div>
+        <img src="imagenes/N4.jpg" alt="imagen secciones">
+      </div>
+
+      <section class="banner">
+        <img src="imagenes/banner.jpg" alt="Banner">
+      </section>
+
+      <section class="videos">
+        <div class="video-wrapper" onclick="playVideo('video1')">
+          <img src="imagenes/video2.jpg" alt="Video 1">
+        </div>
+        <div class="video-wrapper" onclick="playVideo('video2')">
+          <img src="imagenes/video1.jpg" alt="Video 2">
+        </div>
+      </section>
+
+      <div id="videoModal" class="video-modal">
+        <div class="video-content">
+          <span class="close" onclick="closeVideo()">&times;</span>
+          <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/7Xoc9XtDg1w?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+          <iframe id="video2" width="560" height="315" src="https://www.youtube.com/embed/2TUAgexcQAY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="nosotros.js  "></script>
+</body>
+</html>

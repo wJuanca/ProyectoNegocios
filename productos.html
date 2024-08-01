@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACARD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                <img src="icon/LOGO-NUEVO.png" alt="Logo" class="logo" />
+            </a>
+                <span class="site-name">JACARD</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Noticias</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar productos..." oninput="searchProducts()">
+        </div>
+        <div class="category-bar">
+            <button onclick="filterCategory('all')">Todos</button>
+            <button onclick="filterCategory('fertilizantes')">Fertilizantes</button>
+            <button onclick="filterCategory('semillas')">Semillas</button>
+            <button onclick="filterCategory('herramientas')">Herramientas</button>
+            <button onclick="filterCategory('mascotas')">Mascotas</button>
+        </div>
+        <div class="product-grid" id="product-grid">
+            <!-- Productos -->
+            <div class="product" data-category="fertilizantes" onclick="showDetails(1)">
+                <img src="img/Producto1.png" alt="Producto 1">
+                <h2>Fertilizante NPK 20-20-20</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(2)">
+                <img src="img/Producto2.png" alt="Producto 2">
+                <h2>Abono Orgánico Granulado</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(3)">
+                <img src="img/Producto3.png" alt="Producto 3">
+                <h2>Sulfato de Amonio</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(4)">
+                <img src="img/Producto4.png" alt="Producto 4">
+                <h2>Fertilizante de Liberación Lenta</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(5)">
+                <img src="img/Producto5.png" alt="Producto 5">
+                <h2>Nitrato de Calcio</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(6)">
+                <img src="img/Producto6.png" alt="Producto 6">
+                <h2>Semillas de Tomate Raf</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(7)">
+                <img src="img/Producto7.png" alt="Producto 5">
+                <h2>Semillas de Lechuga Romana</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(8)">
+                <img src="img/Producto8.png" alt="Producto 6">
+                <h2>Semillas de Zanahoria Nantesa</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(9)">
+                <img src="img/Producto9.png" alt="Producto 5">
+                <h2>Semillas de Calabacín</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(10)">
+                <img src="img/Producto10.png" alt="Producto 6">
+                <h2>Semillas de Girasol</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(11)">
+                <img src="img/Producto11.png" alt="Producto 6">
+                <h2>Azada de Mano</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(12)">
+                <img src="img/Producto12.png" alt="Producto 6">
+                <h2>Tijera de Podar</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(13)">
+                <img src="img/Producto13.png" alt="Producto 6">
+                <h2>Rastrillo de Jardín</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(14)">
+                <img src="img/Producto14.png" alt="Producto 6">
+                <h2>Pala de Punta Redonda</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(15)">
+                <img src="img/Producto15.png" alt="Producto 6">
+                <h2>Mochila Pulverizadora</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(16)">
+                <img src="img/Producto16.png" alt="Producto 6">
+                <h2>Alimento para Perros Adultos</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(17)">
+                <img src="img/Producto17.png" alt="Producto 6">
+                <h2>Suplemento Vitaminico para Caballos</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(18)">
+                <img src="img/Producto18.png" alt="Producto 6">
+                <h2>Leche en Polvo para Terneros </h2>
+            </div>
+
+
+            
+
+            <div class="product" data-category="mascotas" onclick="showDetails(19)">
+                <img src="img/Producto19.png" alt="Producto 19">
+                <h2>Pienso para Gallinas Ponedoras</h2>
+            </div>
+            
+            <div class="product" data-category="mascotas" onclick="showDetails(20)">
+                <img src="img/Producto20.png" alt="Producto 20">
+                <h2>Arena para Gatos</h2>
+            </div>
+
+            
+
+
+            <div class="product" data-category="herramientas" onclick="showDetails(21)">
+                <img src="img/Producto21.png" alt="Producto 6">
+                <h2>Pala Cuadrada</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(22)">
+                <img src="img/Producto22.png" alt="Producto 6">
+                <h2>Motosierra</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(23)">
+                <img src="img/Producto23.png" alt="Producto 6">
+                <h2>Machete</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(24)">
+                <img src="img/Producto24.png" alt="Producto 6">
+                <h2>Agudana</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(25)">
+                <img src="img/Producto25.png" alt="Producto 6">
+                <h2>Hacha</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(26)">
+                <img src="img/Producto26.png" alt="Producto 6">
+                <h2>Rastrillo</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(27)">
+                <img src="img/Producto27.png" alt="Producto 6">
+                <h2>Cabeza de hacha</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(28)">
+                <img src="img/Producto28.png" alt="Producto 6">
+                <h2>Lima</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(29)">
+                <img src="img/Producto29.png" alt="Producto 6">
+                <h2>Reviplus -tónico vigorizante inyectable-50ml</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(30)">
+                <img src="img/Producto30.png" alt="Producto 6">
+                <h2>Cuello Scalibor - Grande 65 cm - MSD</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(31)">
+                <img src="img/Producto31.png" alt="Producto 6">
+                <h2>Matacura Sarnicida y Jabón Antipulgas 80 gramos</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(32)">
+                <img src="img/Producto32.png" alt="Producto 6">
+                <h2>Cuello Scalibor - Mediano 48cm - Msd</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(33)">
+                <img src="img/Producto33.png" alt="Producto 6">
+                <h2>Flop - Pomada analgésica - Vetoquinol</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(34)">
+                <img src="img/Producto34.png" alt="Producto 6">
+                <h2>Flop - Pomada analgésica - Vetoquinol</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(35)">
+                <img src="img/Producto35.png" alt="Producto 6">
+                <h2>Bravecto 20 - 40kgs Anti Pulgas Y Garrapatas</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(36)">
+                <img src="img/Producto36.png" alt="Producto 6">
+                <h2>Aminomix Pet 100 Gramos</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(37)">
+                <img src="img/Producto37.png" alt="Producto 6">
+                <h2>Glicopan Pet Vetnil 125 Ml</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(38)">
+                <img src="img/Producto38.png" alt="Producto 6">
+                <h2>Antipulgas y Garrapatas - Boehringer Ingelheim</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(39)">
+                <img src="img/Producto39.png" alt="Producto 6">
+                <h2>Drontal Plus - 2 Comprimidos Sabor Carne</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(40)">
+                <img src="img/Producto40.png" alt="Producto 6">
+                <h2>Tiuran Aerosol 125 Ml</h2>
+            </div>
+            <div class="product" data-category="mascotas" onclick="showDetails(41)">
+                <img src="img/Producto41.png" alt="Producto 6">
+                <h2>Frontline Spray - 100ml - Boehringer Ingelheim</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(42)">
+                <img src="img/Producto42.png" alt="Producto 6">
+                <h2>NPK Fertilizante Mineral Mixto Foliar</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(43)">
+                <img src="img/Producto43.png" alt="Producto 6">
+                <h2>Vithal Fertilizante para Orquídeas</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(44)">
+                <img src="img/Producto44.png" alt="Producto 6">
+                <h2>FORTH Bokashi Abono Orgánico</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(45)">
+                <img src="img/Producto45.png" alt="Producto 6">
+                <h2>Forth Suculentas Abono Orgánico</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(46)">
+                <img src="img/Producto46.png" alt="Producto 6">
+                <h2>Forth Orchids Maintenance</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(47)">
+                <img src="img/Producto47.png" alt="Producto 6">
+                <h2>Fertilizante cúprico de jarabe de Burdeos</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(48)">
+                <img src="img/Producto48.png" alt="Producto 6">
+                <h2>Vithal Fertilizante Flores de Goteo</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(49)">
+                <img src="img/Producto49.png" alt="Producto 6">
+                <h2>GOLD GARDEM - FRUTAS</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(50)">
+                <img src="img/Producto50.png" alt="Producto 6">
+                <h2>GOLD GARDEM</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(51)">
+                <img src="img/Producto51.png" alt="Producto 6">
+                <h2>Milena Lechuga Semilla</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(52)">
+                <img src="img/Producto52.png" alt="Producto 6">
+                <h2>Sandía Manchester</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(53)">
+                <img src="img/Producto53.png" alt="Producto 6">
+                <h2>EXPOSICIÓN DE CALABAZA (HS) - TECSEED</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(54)">
+                <img src="img/Producto54.png" alt="Producto 6">
+                <h2>Almeirao Pao de Acúcar</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(55)">
+                <img src="img/Producto55.png" alt="Producto 6">
+                <h2>Lechuga Robusta</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(56)">
+                <img src="img/Producto56.png" alt="Producto 6">
+                <h2>Calabaza Maite</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(57)">
+                <img src="img/Producto57.png" alt="Producto 6">
+                <h2>Alambre de púas - Fortte</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(58)">
+                <img src="img/Producto58.png" alt="Producto 6">
+                <h2>Alambre Galvanizado Blando</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(59)">
+                <img src="img/Producto59.png" alt="Producto 6">
+                <h2>Alambre de púas Varjão Belgo</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(60)">
+                <img src="img/Producto60.png" alt="Producto 6">
+                <h2>Alambre de púas Rodeo</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(61)">
+                <img src="img/Producto61.png" alt="Producto 6">
+                <h2>Belgo Kilo Alambre Blando N.12</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(62)">
+                <img src="img/Producto62.png" alt="Producto 6">
+                <h2>Separador Açofix 3,40mm</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(63)">
+                <img src="img/Producto63.png" alt="Producto 6">
+                <h2>Polyforte Soluble Para Aves De Corral Y Porcinos</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(64)">
+                <img src="img/Producto64.png" alt="Producto 6">
+                <h2>Curamoxil 50</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(65)">
+                <img src="img/Producto65.png" alt="Producto 6">
+                <h2>Solución de Polyforte</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(66)">
+                <img src="img/Producto66.png" alt="Producto 6">
+                <h2>Agulha Hipodérmica Hoppner</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(67)">
+                <img src="img/Producto67.png" alt="Producto 6">
+                <h2>Antibiótico para aves de corral y cerdos</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(68)">
+                <img src="img/Producto68.png" alt="Producto 6">
+                <h2>Fertilizante NPK 15-15-15</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(69)">
+                <img src="img/Producto69.png" alt="Producto 6">
+                <h2>Fertilizante Orgánico de Guano de Murciélago</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(70)">
+                <img src="img/Producto70.png" alt="Producto 6">
+                <h2>Fertilizante Líquido de Microelementos</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(71)">
+                <img src="img/Producto71.png" alt="Producto 6">
+                <h2>Fertilizante para Césped</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(72)">
+                <img src="img/Producto72.png" alt="Producto 6">
+                <h2>Fertilizante de Liberación Controlada</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(73)">
+                <img src="img/Producto73.png" alt="Producto 6">
+                <h2>Fertilizante NPK 20-20-20</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(74)">
+                <img src="img/Producto74.png" alt="Producto 6">
+                <h2>Fertilizante Orgánico de Algas Marinas</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(75)">
+                <img src="img/Producto75.png" alt="Producto 6">
+                <h2>Fertilizante Líquido para Flores</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(76)">
+                <img src="img/Producto76.png" alt="Producto 6">
+                <h2>Fertilizante para Césped de Alta Resistencia</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(77)">
+                <img src="img/Producto77.png" alt="Producto 6">
+                <h2>Fertilizante Orgánico de Estiércol de Caballo</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(78)">
+                <img src="img/Producto78.png" alt="Producto 6">
+                <h2>Fertilizante Foliar de Potasio</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(79)">
+                <img src="img/Producto79.png" alt="Producto 6">
+                <h2>Fertilizante para Orquídeas</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(80)">
+                <img src="img/Producto80.png" alt="Producto 6">
+                <h2>Fertilizante Orgánico de Vermicompost</h2>
+            </div>
+            <div class="product" data-category="fertilizantes" onclick="showDetails(81)">
+                <img src="img/Producto81.png" alt="Producto 6">
+                <h2>Fertilizante para Cultivo de Hortalizas</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(82)">
+                <img src="img/Producto82.png" alt="Producto 6">
+                <h2>Semillas de Zanahoria</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(83)">
+                <img src="img/Producto83.png" alt="Producto 6">
+                <h2>Semillas de Calabaza</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(84)">
+                <img src="img/Producto84.png" alt="Producto 6">
+                <h2>Semillas de Lechuga</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(85)">
+                <img src="img/Producto85.png" alt="Producto 6">
+                <h2>Semillas de Hierbas Aromáticas</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(86)">
+                <img src="img/Producto86.png" alt="Producto 6">
+                <h2>Semillas de Girasol para Forraje</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(87)">
+                <img src="img/Producto87.png" alt="Producto 6">
+                <h2>Semillas de Tomate Beefsteak</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(88)">
+                <img src="img/Producto88.png" alt="Producto 6">
+                <h2>Semillas de Pimiento Jalapeño</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(89)">
+                <img src="img/Producto89.png" alt="Producto 6">
+                <h2>Semillas de Calabacín</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(90)">
+                <img src="img/Producto90.png" alt="Producto 6">
+                <h2>Semillas de Girasol para Aves Silvestres</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(91)">
+                <img src="img/Producto111.png" alt="Producto 6">
+                <h2>Semillas de Hierba de Trigo</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(92)">
+                <img src="img/Producto91.png" alt="Producto 6">
+                <h2>Semillas de Sandía Sin Pepitas</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(93)">
+                <img src="img/Producto92.png" alt="Producto 6">
+                <h2>Semillas de Berenjena</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(94)">
+                <img src="img/Producto93.png" alt="Producto 6">
+                <h2>Semillas de Fresa</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(95)">
+                <img src="img/Producto94.png" alt="Producto 6">
+                <h2>Semillas de Acelga</h2>
+            </div>
+            <div class="product" data-category="semillas" onclick="showDetails(96)">
+                <img src="img/Producto95.png" alt="Producto 6">
+                <h2>Semillas de Hierba de Alfalfa</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(97)">
+                <img src="img/Producto96.png" alt="Producto 6">
+                <h2>Azada de Acero Inoxidable</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(98)">
+                <img src="img/Producto97.png" alt="Producto 6">
+                <h2>Rastrillo de Jardinería</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(99)">
+                <img src="img/Producto98.png" alt="Producto 6">
+                <h2>Motosierra de Gasolina</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(100)">
+                <img src="img/Producto99.png" alt="Producto 6">
+                <h2>Regadera de Plástico Resistente</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(101)">
+                <img src="img/Producto100.png" alt="Producto 6">
+                <h2>Guantes de Jardinería</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(102)">
+                <img src="img/Producto101.png" alt="Producto 6">
+                <h2>Pala de Punta</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(103)">
+                <img src="img/Producto102.png" alt="Producto 6">
+                <h2>Cortador de Setos</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(104)">
+                <img src="img/Producto103.png" alt="Producto 6">
+                <h2>Manguera de Jardín reforzada</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(105)">
+                <img src="img/Producto104.png" alt="Producto 6">
+                <h2>Sopladora de Hojas a Gasolina</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(106)">
+                <img src="img/Producto105.png" alt="Producto 6">
+                <h2>Set de Herramientas de Jardinería</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(107)">
+                <img src="img/Producto106.png" alt="Producto 6">
+                <h2>Tijeras de Podar Profesionales</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(108)">
+                <img src="img/Producto107.png" alt="Producto 6">
+                <h2>Espolvoreador de Semillas</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(109)">
+                <img src="img/Producto108.png" alt="Producto 6">
+                <h2>Tijeras de Hierba Manual</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(110)">
+                <img src="img/Producto109.png" alt="Producto 6">
+                <h2>Manguera de Riego por Goteo</h2>
+            </div>
+            <div class="product" data-category="herramientas" onclick="showDetails(111)">
+                <img src="img/Producto110.png" alt="Producto 6">
+                <h2>Cultivador de Suelo Manual</h2>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            if (category) {
+                filterCategory(category);
+            }
+        });
+
+        function filterCategory(category) {
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function searchProducts() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productName = product.querySelector('h2').textContent.toLowerCase();
+                if (productName.includes(input)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <div id="product-details" class="product-details">
+        <div class="product-details-content">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <div class="details-left">
+                <img id="detail-image" src="" alt="Detalle del producto">
+            </div>
+            <div class="details-right">
+                <h2 id="detail-name"></h2>
+                <p id="detail-description"></p>
+                <p id="detail-price"></p>
+                <p class="note"><a href="contactanos.html">¿Cómo adquirir el producto?</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

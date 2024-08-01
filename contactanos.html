@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JACARD</title>
+  <link rel="stylesheet" href="contactanos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("QFmCgjEtlAH0FRtiy");
+    })();
+  </script>
+  <script src="correo.js" defer></script>
+  <script src="contactanos.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="icon/LOGO-NUEVO.png" alt="Logo" class="logo" />
+      </a>
+        <span class="site-name">JACARD</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Noticias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <div class="left-section">
+        <form method="post" class="contact-form" id="contact-form">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="city">Ciudad:</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="right-section">
+        <div class="faq-item">
+            <h2 class="faq-question">¿Cómo puedo adquirir un producto?</h2>
+            <p class="faq-answer">
+              Para adquirir nuestros productos, te invitamos a visitarnos directamente
+               en nuestra agropecuaria. Contamos con una amplia variedad de productos 
+               de alta calidad disponibles para ti. <br>
+            </p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">¿Cómo reservar un producto?</h2>
+            <p class="faq-answer">
+              Si deseas reservar un producto, puedes completar el formulario de reserva 
+              en nuestra página web. Una vez que hayas enviado el formulario, podrás 
+              acercarte a nuestro local para finalizar la compra y recoger tu producto.
+               Estamos aquí para ayudarte en cada paso del proceso y asegurar que obtengas 
+               exactamente lo que necesitas.<br>
+            </p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">¿En qué te podemos ayudar?</h2>
+            <p class="faq-answer">
+              Estamos aquí para ayudarte con cualquier consulta que puedas tener.
+              Ya sea que necesites asistencia técnica, tengas preguntas sobre
+              nuestros servicios, o simplemente quieras darnos tu opinión, no
+              dudes en ponerte en contacto con nosotros.
+            </p>
+        </div>
+        <div class="info-icons">
+            <div class="icon-container">
+              <a href="https://www.google.com/maps?q=Mall Premier Juticalpa" target="_blank">
+                <img src="icon/ubi.png" alt="Ubicación" class="icon">
+              </a>
+                <span class="icon-text">Juticalpa, Olancho</span>
+            </div>
+            <div class="icon-container">
+              <a href="https://wa.me/98333365" target="_blank">
+                <img src="icon/Telefono.png" alt="Teléfono" class="icon">
+              </a>
+                <span class="icon-text">9833-3365</span>
+            </div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#003704" fill-opacity="1" 
+      d="M0,288L60,272C120,256,240,224,360,197.3C480,171,600,149,720,160C840,171,960,213,1080,197.3C1200,
+      181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,
+      320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+  </main>
+</body>
+</html>

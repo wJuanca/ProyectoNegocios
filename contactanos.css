@@ -1,0 +1,205 @@
+/* General */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    overflow-y: hidden; /* Evitar desplazamiento vertical */
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.site-name {
+    margin-right: 20px; /* Espacio entre el logo y el texto */
+    font-size: 2.5em;
+    font-weight: 1000;
+    color: #000000;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Main Content */
+main {
+    background-color: rgb(241, 241, 241);
+    margin-top: 80px; /* Ajusta según el tamaño del header */
+    padding-top: 20px; /* Ajusta el espacio desde el header */
+    min-height: calc(100vh - 80px - 50px); /* Ajusta el mínimo alto del main, considerando la altura del SVG */
+    position: relative; /* Para que z-index funcione */
+    z-index: 1; /* Asegura que el contenido esté por delante del SVG */
+    padding-bottom: 50px; /* Espacio para asegurar que el SVG esté visible */
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto; /* Ajusta el margen para centrar */
+}
+
+.left-section {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Ajusta el margen superior para mover el formulario hacia abajo */
+}
+
+.right-section {
+    width: 40%;
+    text-align: left;
+    margin-top: 40px; /* Ajusta el margen superior si necesitas separar más del formulario */
+}
+
+/* Estilos del formulario */
+.contact-form {
+    width: 70%; /* Reduce el ancho del formulario */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 4px; /* Bordes redondeados */
+    outline: none; /* Quita el borde al hacer foco */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.contact-form input[type="text"] {
+    height: 40px; /* Altura específica para el input de texto */
+    line-height: 40px; /* Alinea el texto verticalmente */
+}
+
+.contact-form textarea {
+    height: 100px; /* Altura específica para el textarea */
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4CAF50; /* Color del borde al hacer foco */
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #003704; /* Color del botón */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.contact-form button:hover {
+    background-color: #009501;
+}
+
+/* Estilos de los iconos */
+h2 {
+    color: #003704;
+}
+
+.info-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px; /* Ajusta el tamaño del icono según sea necesario */
+}
+
+.icon-text {
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Preguntas Frecuentes */
+.faq-question {
+    cursor: pointer;
+    color: #003704;
+    margin: 10px 0;
+}
+
+.faq-answer {
+    display: none;
+    margin: 0 0 10px 0;
+}
+
+/* SVG */
+svg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
